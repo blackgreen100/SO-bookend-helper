@@ -4,7 +4,7 @@
 // @downloadURL  https://raw.githubusercontent.com/blackgreen100/SO-bookend-helper/master/script.user.js
 // @updateURL    https://raw.githubusercontent.com/blackgreen100/SO-bookend-helper/master/script.user.js
 // @author       blackgreen
-// @version      0.0.1
+// @version      0.0.2
 //
 // @match        https://*.stackoverflow.com/users/*
 // @exclude      https://contests.stackoverflow.com/*
