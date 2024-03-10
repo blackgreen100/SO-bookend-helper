@@ -149,13 +149,26 @@ function initMultiPostsTable() {
         }
     });
 
-    // Checkbox toggle
-    const boxes = $('.selected-post');
-    $('#select-all').change(function () {
-        boxes.prop('checked', this.checked);
-    });;
-
     const bookendButton = $('button.so-bookend')
+
+    const btnDiv = $(`<div class="actions"></div>`).insertAfter(bookendButton);
+
+    $(`<input type="button" class="action-btn" value="Select all" />`)
+        .appendTo(btnDiv)
+        .on('click', function () {
+            const boxes = $('.selected-post');
+            const active = $(this).attr('active');
+            if (!active) {
+                boxes.prop('checked', true);
+                $(this).attr('active', true);
+                $(this).attr('value', 'Deselect all')
+            } else {
+                boxes.prop('checked', false);
+                $(this).attr('active', false);
+                $(this).attr('value', 'Select all');
+            }
+
+        })
 
     // Action buttons
     const btnDiv = $(`<div class="actions"></div>`).insertAfter(bookendButton);
