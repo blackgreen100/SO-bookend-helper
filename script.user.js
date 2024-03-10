@@ -201,9 +201,6 @@ function initMultiPostsTable() {
     //         undeletePosts(selPostIds);
     //         reloadWhenDone();
     //     });
-
-    // Linkify user id in header to return to deleted user page
-    $('#content h1').first().html((i, v) => v.replace(/(\d+)/, '<a href="/users/$1" target="_blank">$1</a>'));
 }
 
 
