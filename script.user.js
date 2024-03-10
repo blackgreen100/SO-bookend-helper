@@ -136,6 +136,8 @@ function initMultiPostsTable() {
     const table = $('#js-post-summaries');
     if (table.length === 0) return;
 
+    $(this).attr('disabled', true);
+
     // Add checkboxes
     table.find('.s-post-summary:not(.s-post-summary__deleted)').each(function () {
         const url = $(this).find('a').attr('href');
